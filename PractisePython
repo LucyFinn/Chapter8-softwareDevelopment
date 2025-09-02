@@ -1,0 +1,31 @@
+#Finding out if a Number is Divisible by 2!
+
+num = int(input("Enter a number: "))
+sum = num % 2
+
+if sum == 0:
+    print("Number is even!")
+else:
+    print("Number is odd!")
+
+
+numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(numList)
+
+for item in numList:
+    if item %2 == 0:
+        print(item, "is even!")
+    else:
+        print(item, "is odd!")
+        
+        
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for i in number:
+    if i %2 == 0:
+        print(f'{i} is even!')
+
+cars = ["BMW", "Kia", "Ford", "VW"]
+print(len(cars))
+for i in range (len(cars)):
+    if i == 2:
+        print(cars[i])
