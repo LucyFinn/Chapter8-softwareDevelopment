@@ -1,0 +1,23 @@
+digraph Maths {
+    rankdir=TB;
+    node [fontname="Arial"];
+
+    # Define shapes
+    Start [label="Start", shape=oval, style=filled, fillcolor=lightblue];
+    Number [label="Enter a Number", shape=parallelogram];
+    Division [label="Is the number divisible by 2?", shape=diamond];
+    Even [label="Number is even!", shape=rectangle];
+    Odd [label="Number is odd!", shape=rectangle];
+    
+    
+
+    End [label="Yay!", shape=oval, style=filled, fillcolor=lightgreen];
+
+    # Flow
+    Start -> Number  -> Division 
+    Division -> Even [label="Yes"];
+    Division -> Odd [label="No"];
+    
+    Odd -> End
+    Even -> End;
+}
