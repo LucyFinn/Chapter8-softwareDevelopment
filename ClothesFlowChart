@@ -1,0 +1,32 @@
+digraph GettingReady {
+    rankdir=TB;
+    node [fontname="Arial"];
+
+    # Define shapes
+    Start [label="Start", shape=oval, style=filled, fillcolor=lightblue];
+    Wake [label="Wake up", shape=rectangle];
+    Weather [label="Get up & Check weather", shape=parallelogram];
+    Rain [label="Is it raining?", shape=diamond];
+    Cold [label="Is it cold?", shape=diamond];
+    Coat [label="Wear a raincoat!", shape=rectangle];
+    Normal [label="Wear no coat!", shape=rectangle];
+    Summer [label="Wear light clothes!!", shape=rectangle];
+    Winter [label="Wear heavy clothes!!", shape=rectangle];
+    
+
+    End [label="Ready to go!", shape=oval, style=filled, fillcolor=lightgreen];
+
+    # Flow
+    Start -> Wake -> Weather  -> Rain 
+    Rain -> Coat [label="Yes"];
+    Rain -> Normal [label="No"];
+    
+    Coat -> Cold
+    Normal -> Cold
+    
+    Cold -> Summer [label="No"];
+    Cold -> Winter [label="Yes"];
+    
+    Winter -> End
+    Summer -> End;
+}
